@@ -18,7 +18,7 @@ WORKDIR /home/node/app
 COPY package*.json  ./
 COPY yarn.lock ./
 
-RUN yarn install --production
+RUN npm install --production
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
 
