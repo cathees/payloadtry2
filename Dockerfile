@@ -18,6 +18,7 @@ WORKDIR /home/node/app
 COPY package*.json  ./
 
 RUN pwd
+RUN ls /home/node/app
 RUN npm install --production
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
