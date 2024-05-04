@@ -24,7 +24,7 @@ COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
 RUN pwd
 RUN ls /home/node/app
-RUN ls /home/node/app/dist
+RUN ls /home/node/app/dist/payload
 EXPOSE 3000
 
 CMD ["node", "dist/server.js"]
