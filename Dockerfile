@@ -1,4 +1,4 @@
-FROM node:18.8 as base
+FROM node:18.17 as base
 
 FROM base as builder
 
