@@ -8,7 +8,7 @@ COPY package*.json ./
 COPY . .
 RUN npm install
 RUN npm run build
-
+RUN ls dist
 FROM base as runtime
 
 ENV NODE_ENV=production
