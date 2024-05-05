@@ -4,3 +4,4 @@ build
 .env
 .next
 .vercel
+node_modules

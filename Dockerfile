@@ -7,7 +7,7 @@ COPY package*.json ./
 
 COPY . .
 RUN npm install
-RUN NODE_OPTIONS=--max_old_space_size=4096 npm run build
+RUN npm run build
 
 FROM base as runtime
 
