@@ -22,7 +22,7 @@ RUN npm install --production
 
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
-COPY --from=builder /home/node/app/dist/payload/payload.config.js /home/node/app/dist
+ADD payload /home/node/app/dist/
 RUN pwd
 RUN ls /home/node/app
 RUN ls /home/node/app/dist/payload
