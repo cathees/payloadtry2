@@ -22,6 +22,7 @@ RUN npm install --production
 
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
+COPY --from=builder /home/node/app/.next ./.next
 RUN ls /home/node/app
 RUN ls /home/node/app/dist/payload
 RUN ls /home/node/app/build
