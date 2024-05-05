@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const ContentSecurityPolicy = require('./csp')
 const redirects = require('./redirects')
-
+module.exports = {
+  distDir: '/home/node/app/dist',
+}
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
