@@ -25,7 +25,7 @@ COPY --from=builder /home/node/app/build ./build
 RUN ls /home/node/app
 RUN ls /home/node/app/dist/payload
 RUN ls /home/node/app/build
-RUN ls /home/node/
+RUN ls /home
 
 
 EXPOSE 3000
