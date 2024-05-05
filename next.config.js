@@ -2,7 +2,7 @@
 const ContentSecurityPolicy = require('./csp')
 const redirects = require('./redirects')
 module.exports = {
-  distDir: '/home/node/app/dist',
+  distDir: 'build',
 }
 const nextConfig = {
   reactStrictMode: true,
