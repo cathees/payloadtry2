@@ -12,7 +12,7 @@ RUN npm run build
 FROM base as runtime
 
 ENV NODE_ENV=production
-ENV PAYLOAD_CONFIG_PATH=dist/payload.config.js
+ENV PAYLOAD_CONFIG_PATH=dist/payload/payload.config.js
 
 WORKDIR /home/node/app
 COPY package*.json  ./
@@ -22,7 +22,6 @@ RUN npm install --production
 
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
-COPY --from=builder /home/node/app/dist/payload/ /home/node/app/dist
 RUN ls /home/node/app
 RUN ls /home/node/app/dist/payload
 RUN ls /home/node/app/build
