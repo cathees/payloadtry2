@@ -27,6 +27,7 @@ RUN ls /home/node/app
 RUN ls /home/node/app/dist/payload
 RUN ls /home/node/app/build
 RUN ls /home/node/app/dist
+RUN find . -name .next
 
 EXPOSE 3000
 
