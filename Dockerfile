@@ -26,6 +26,7 @@ COPY --from=builder /home/node/app/dist/payload/ /home/node/app/dist
 RUN pwd
 RUN ls /home/node/app
 RUN ls /home/node/app/dist/payload
+RUN ls /home/node/app/.next
 
 EXPOSE 3000
 
