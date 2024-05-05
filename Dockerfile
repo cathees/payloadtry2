@@ -23,10 +23,10 @@ RUN npm install --production
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
 COPY --from=builder /home/node/app/dist/payload/ /home/node/app/dist
-RUN pwd
 RUN ls /home/node/app
 RUN ls /home/node/app/dist/payload
-RUN ls /home/node/app/.next
+RUN ls /home/node/app/build
+RUN ls /home/node/app/dist
 
 EXPOSE 3000
 
